@@ -94,6 +94,8 @@ Review the following patch diff and provide inline feedback on the code changes.
         coding_style_docs = [
             {"name": "Kernel Coding Style Guidelines",
              "path": "Documentation/process/coding-style.rst"},
+            {"name": "Writing kernel-doc comments Guidelines",
+             "path": "Documentation/doc-guide/kernel-doc.rst"},
             {"name": "Devicetree Coding Style Guidelines",
              "path": "Documentation/devicetree/bindings/dts-coding-style.rst"},
             {"name": "Kernel Rust Coding Style Guidelines",
