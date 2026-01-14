@@ -45,12 +45,12 @@ class AiCodeReview(AiReview):
         Dependency(
             name="clangd",
             min_version="14.0.0",
-            max_version="20.0.0",
+            max_version="23.0.0",
         ),
         Dependency(
             name="clang",
             min_version="14.0.0",
-            max_version="20.0.0",
+            max_version="23.0.0",
         ),
     ]
 
