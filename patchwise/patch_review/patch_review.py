@@ -93,8 +93,8 @@ class Dependency:
         pkg_managers: list[tuple[str, list[str] | None, list[str]]] = [
             (
                 "apt-get",
-                ["sudo", "apt-get", "update"],
-                ["sudo", "apt-get", "install", "-y", self.name],
+                ["sudo", "DEBIAN_FRONTEND=noninteractive", "apt-get", "update"],
+                ["sudo", "DEBIAN_FRONTEND=noninteractive", "apt-get", "install", "-y", self.name],
             ),
             ("dnf", None, ["sudo", "dnf", "install", "-y", self.name]),
             ("yum", None, ["sudo", "yum", "install", "-y", self.name]),
