@@ -7,6 +7,7 @@ import re
 import subprocess
 import threading
 import time
+import shutil
 from dataclasses import dataclass
 from typing import Any, Dict, List, Optional, Set, Tuple
 
@@ -210,7 +211,13 @@ regulator-name.
             "ARCH=arm64",
             "LLVM=1",
         ]
-        full_args = base_args + args
+        ccache_path = shutil.which("ccache")
+        if ccache_path:
+            ccache_args = [f"CC={ccache_path} clang"]
+        else:
+            ccache_args = []
+
+        full_args = base_args + ccache_args + args
 
         desc = " ".join(args)
 
